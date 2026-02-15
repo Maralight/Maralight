@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Maralight Company Limited — Coming Soon</title>
-  <meta name="description" content="Maralight Company Limited — Consulting, Strategy, Advisory & Technology. Parent company and builder of EnergyIQ." />
+  <meta name="description" content="Maralight Company Limited — Consulting, Strategy, Advisory & Technology. Corporate website coming soon." />
 
   <style>
     :root{
@@ -15,267 +15,323 @@
       --line:rgba(255,255,255,0.14);
       --accent:#7cdaed;
       --accent2:#22c55e;
+      --shadow: 0 18px 60px rgba(0,0,0,0.35);
     }
-    *{box-sizing:border-box}
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
     body{
       margin:0;
-      min-height:100vh;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
       color:var(--text);
       background:
-        radial-gradient(1000px 600px at 15% 20%, rgba(124,58,237,0.35), transparent 60%),
-        radial-gradient(900px 500px at 80% 10%, rgba(34,197,94,0.22), transparent 55%),
-        radial-gradient(900px 600px at 70% 80%, rgba(59,130,246,0.18), transparent 60%),
+        radial-gradient(1000px 600px at 15% 20%, rgba(124,58,237,0.30), transparent 60%),
+        radial-gradient(900px 520px at 80% 12%, rgba(34,197,94,0.18), transparent 60%),
+        radial-gradient(900px 600px at 70% 85%, rgba(59,130,246,0.16), transparent 62%),
         var(--bg);
-    }
-    a{color:var(--accent); text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 56px 20px 80px;
-    }
-    .topbar{
       display:flex;
-      justify-content:space-between;
       align-items:center;
-      gap:16px;
-      margin-bottom:28px;
+      justify-content:center;
+      padding: 34px 18px;
     }
+
+    a{ color:var(--accent); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+
+    .wrap{
+      width: min(980px, 100%);
+    }
+
+    .frame{
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      backdrop-filter: blur(10px);
+    }
+
+    .top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding: 18px 22px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(0,0,0,0.12);
+    }
+
     .brand{
       display:flex;
       align-items:center;
       gap:12px;
       min-width:0;
     }
+
+    /* Fancy placeholder "M" logo */
     .logo{
-      width:44px;height:44px;border-radius:12px;
-      background: linear-gradient(135deg, rgba(124,218,237,0.95), rgba(34,197,94,0.85));
-      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
-      border: 1px solid rgba(255,255,255,0.16);
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display:grid;
+      place-items:center;
+      border: 1px solid rgba(255,255,255,0.18);
+      background:
+        radial-gradient(14px 14px at 30% 25%, rgba(255,255,255,0.55), transparent 60%),
+        linear-gradient(135deg, rgba(124,218,237,0.85), rgba(34,197,94,0.55));
+      box-shadow: 0 10px 26px rgba(0,0,0,0.35);
+      position: relative;
+      overflow:hidden;
     }
-    .brand h1{
-      font-size:16px; margin:0;
-      letter-spacing:0.2px;
-      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    .logo::after{
+      content:"";
+      position:absolute;
+      inset:-40%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.22), transparent);
+      transform: rotate(25deg);
+      animation: sheen 4.5s linear infinite;
     }
-    .pill{
-      font-size:12px;
-      padding:8px 10px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,0.04);
+    @keyframes sheen{
+      0%{ transform: translateX(-60%) rotate(25deg); }
+      100%{ transform: translateX(60%) rotate(25deg); }
+    }
+    .logo span{
+      font-weight: 900;
+      font-size: 18px;
+      letter-spacing: 0.5px;
+      color: rgba(10,15,28,0.90);
+      text-shadow: 0 1px 0 rgba(255,255,255,0.25);
+    }
+
+    .brandTitle{
+      min-width:0;
+    }
+    .brandTitle .name{
+      margin:0;
+      font-size: 14px;
+      letter-spacing: 0.2px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .brandTitle .tag{
+      margin-top:2px;
+      font-size: 12px;
       color: var(--muted);
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    .status{
+      font-size: 12px;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.03);
+      padding: 8px 10px;
+      border-radius: 999px;
       white-space:nowrap;
     }
 
-    .hero{
-      display:grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap:18px;
-      align-items:stretch;
-    }
-    @media (max-width: 860px){
-      .hero{grid-template-columns:1fr}
-    }
-    .card{
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 22px;
-      box-shadow: 0 18px 50px rgba(0,0,0,0.25);
-      backdrop-filter: blur(10px);
-    }
-    .headline{
-      font-size: 36px;
-      line-height: 1.1;
-      margin: 6px 0 10px;
-      letter-spacing:-0.4px;
-    }
-    .sub{
-      color: var(--muted);
-      font-size: 15px;
-      line-height: 1.6;
-      margin: 0 0 16px;
-    }
-    .kpiRow{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:12px;
-    }
-    .kpi{
-      border:1px solid var(--line);
-      background: rgba(255,255,255,0.03);
-      border-radius: 14px;
-      padding: 10px 12px;
-      min-width: 160px;
-      flex: 1;
-    }
-    .kpi .label{font-size:12px;color:var(--muted)}
-    .kpi .value{font-size:14px;margin-top:4px}
-    .tagRow{
-      display:flex; flex-wrap:wrap; gap:8px;
-      margin-top: 10px;
-    }
-    .tag{
-      border:1px solid rgba(124,218,237,0.35);
-      background: rgba(124,218,237,0.08);
-      color: rgba(255,255,255,0.88);
-      padding: 7px 10px;
-      border-radius: 999px;
-      font-size: 12px;
-      letter-spacing:0.2px;
+    .content{
+      padding: 26px 22px 22px;
     }
 
-    .sectionTitle{
-      font-size: 13px;
-      letter-spacing: 0.6px;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin: 0 0 10px;
+    .headline{
+      margin: 6px 0 10px;
+      font-size: clamp(28px, 4.2vw, 44px);
+      letter-spacing: -0.02em;
+      line-height: 1.08;
     }
-    .list{
-      margin:0;
+
+    .sub{
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 78ch;
+    }
+
+    .chips{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin: 10px 0 18px;
+    }
+    .chip{
+      border: 1px solid rgba(124,218,237,0.25);
+      background: rgba(124,218,237,0.08);
+      color: rgba(255,255,255,0.86);
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 12px;
+      letter-spacing: 0.2px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 12px;
+    }
+    @media (max-width: 860px){
+      .grid{ grid-template-columns: 1fr; }
+      .status{ display:none; }
+    }
+
+    .panel{
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,0.14);
+      border-radius: 18px;
+      padding: 16px;
+    }
+
+    .panel h3{
+      margin: 0 0 10px;
+      font-size: 13px;
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.70);
+    }
+
+    .panel p{
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .panel ul{
+      margin: 10px 0 0;
       padding-left: 18px;
       color: var(--muted);
-      line-height:1.7;
-      font-size:14px;
+      font-size: 14px;
+      line-height: 1.8;
     }
-    .divider{
-      height:1px;
-      background: var(--line);
-      margin: 16px 0;
-      border:0;
-    }
-    .cta{
+
+    .ctaRow{
       display:flex;
       gap:10px;
       flex-wrap:wrap;
-      margin-top: 14px;
+      align-items:center;
+      margin-top: 18px;
     }
+
     .btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
       gap:8px;
-      padding: 10px 14px;
-      border-radius: 12px;
+      padding: 11px 14px;
+      border-radius: 14px;
       border: 1px solid var(--line);
       background: rgba(255,255,255,0.05);
       color: var(--text);
       font-size: 13px;
-      cursor: pointer;
-      user-select:none;
+      font-weight: 650;
+      text-decoration:none;
     }
     .btnPrimary{
       border-color: rgba(34,197,94,0.45);
       background: rgba(34,197,94,0.12);
     }
-    .foot{
-      margin-top: 18px;
-      color: rgba(255,255,255,0.58);
+    .btn:hover{
+      transform: translateY(-1px);
+      text-decoration:none;
+    }
+
+    .fine{
+      margin-top: 14px;
+      color: rgba(255,255,255,0.55);
       font-size: 12px;
-      line-height:1.6;
+      line-height: 1.6;
+    }
+
+    .foot{
+      padding: 14px 22px;
+      border-top: 1px solid var(--line);
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+      color: rgba(255,255,255,0.55);
+      font-size: 12px;
+      background: rgba(0,0,0,0.10);
     }
   </style>
 </head>
 
 <body>
   <div class="wrap">
-
-    <div class="topbar">
-      <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <h1>Maralight Company Limited</h1>
+    <div class="frame">
+      <div class="top">
+        <div class="brand">
+          <div class="logo" aria-label="Maralight placeholder logo"><span>M</span></div>
+          <div class="brandTitle">
+            <p class="name"><strong>Maralight Company Limited</strong></p>
+            <div class="tag">Consulting • Strategy • Advisory • Technology</div>
+          </div>
+        </div>
+        <div class="status">Corporate website launching soon</div>
       </div>
-      <div class="pill">Rivers, Nigeria • Coming Soon</div>
-    </div>
 
-    <div class="hero">
-      <!-- MAIN CARD -->
-      <div class="card">
-        <div class="sectionTitle">Parent Company</div>
-        <div class="headline">Consulting, Strategy, Advisory & Technology.</div>
+      <div class="content">
+        <div class="headline">Helping organisations grow, modernise, and perform.</div>
         <p class="sub">
-          Maralight Company Limited is a consulting and technology-led firm focused on delivering
-          business development and management advisory services, alongside intellectual property and
-          technology development.
+          Maralight Company Limited is a multidisciplinary consulting and technology firm providing
+          business development and management consultancy services, as well as intellectual property
+          and technology development, ownership, and related services.
         </p>
 
-        <div class="tagRow">
-          <div class="tag">Consulting</div>
-          <div class="tag">Strategy</div>
-          <div class="tag">Advisory</div>
-          <div class="tag">Technology</div>
+        <div class="chips" aria-label="Service keywords">
+          <div class="chip">Consulting</div>
+          <div class="chip">Strategy</div>
+          <div class="chip">Advisory</div>
+          <div class="chip">Technology</div>
         </div>
 
-        <hr class="divider" />
-
-        <div class="sectionTitle">Core Objectives</div>
-        <ul class="list">
-          <li>Provide business development and management consultancy services.</li>
-          <li>Undertake intellectual property and technology development, ownership and services.</li>
-        </ul>
-
-        <div class="kpiRow">
-          <div class="kpi">
-            <div class="label">Product</div>
-            <div class="value"><strong>EnergyIQ</strong> (owned by Maralight)</div>
+        <div class="grid">
+          <div class="panel">
+            <h3>What we do</h3>
+            <ul>
+              <li>Business development and growth strategy</li>
+              <li>Management advisory and operating model support</li>
+              <li>Technology and product development (IP-led)</li>
+              <li>Data, analytics, and automation for decision support</li>
+            </ul>
           </div>
-          <div class="kpi">
-            <div class="label">Focus</div>
-            <div class="value">Energy / Downstream / Enterprise Ops</div>
-          </div>
-          <div class="kpi">
-            <div class="label">Status</div>
-            <div class="value">Web Page • Build in Progress</div>
+
+          <div class="panel">
+            <h3>How we work</h3>
+            <p>
+              We engage with leaders and teams to define objectives, design practical solutions,
+              and support implementation with disciplined delivery and measurable outcomes.
+            </p>
+            <p style="margin-top:10px;">
+              <strong>EnergyIQ</strong> is a product owned by Maralight Company Limited — coming soon.
+            </p>
           </div>
         </div>
 
-        <div class="cta">
-          <a class="btn btnPrimary" href="mailto:hello@maralightltd.com">Email: hello@maralightltd.com</a>
-          <a class="btn" href="#energyiq">Learn about EnergyIQ</a>
+        <div class="ctaRow">
+          <a class="btn btnPrimary" href="mailto:hello@maralightltd.com">Contact us: hello@maralightltd.com</a>
+          <a class="btn" href="mailto:hello@maralightltd.com?subject=Maralight%20-%20Consulting%20Enquiry">Request a consultation</a>
         </div>
 
-        <div class="foot">
-          This page is a placeholder while Maralight’s digital presence and products are being finalized.
+        <div class="fine">
+          Location: Rivers, Nigeria. For all enquiries, please email <a href="mailto:hello@maralightltd.com">hello@maralightltd.com</a>.
         </div>
       </div>
 
-      <!-- SIDE CARD -->
-      <div class="card" id="energyiq">
-        <div class="sectionTitle">Product</div>
-        <div class="headline" style="font-size:22px;margin-top:0;">EnergyIQ — Enterprise SaaS Platform</div>
-        <p class="sub" style="font-size:14px;">
-          EnergyIQ is a product owned by Maralight Company Limited. It is being developed as a platform for
-          operators in the downstream energy industry.
-        </p>
-
-        <div class="sectionTitle">What EnergyIQ will deliver</div>
-        <ul class="list">
-          <li>SaaS platform for operators</li>
-          <li>Data analytics and performance monitoring</li>
-          <li>Monitoring and compliance tooling</li>
-          <li>Pricing and optimization engine</li>
-          <li>Business evaluation and decision-support system</li>
-        </ul>
-
-        <hr class="divider" />
-
-        <div class="sectionTitle">Updates</div>
-        <p class="sub" style="font-size:14px;margin-bottom:0;">
-          For partnership, pilot deployments, or early access discussions, use:
-          <br />
-          <a href="mailto:hello@maralightltd.com">hello@maralightltd.com</a>
-        </p>
+      <div class="foot">
+        <div>Rivers, Nigeria</div>
+        <div>© <span id="y"></span> Maralight Company Limited</div>
       </div>
     </div>
-
-    <div class="foot" style="margin-top:22px;">
-      Confidentiality notice: This email and any attachments are confidential and intended solely for the recipient.
-    </div>
-
   </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
