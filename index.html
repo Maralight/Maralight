@@ -3,389 +3,374 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Maralight Company Limited — Coming Soon</title>
-  <meta name="description" content="Maralight Company Limited — Consulting, Strategy, Advisory & Technology. Corporate website coming soon." />
-  <!-- SEO / Indexing -->
+
+  <title>Maralight Company Limited — Consulting, Strategy, Advisory & Technology</title>
+  <meta name="description" content="Maralight Company Limited is a business development and management consultancy firm integrating strategy, advisory, and technology to help organisations grow, modernise, and perform." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://maralightltd.com/" />
 
-  <!-- Favicon (temporary SVG “M” so you don’t need a logo file yet) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop stop-color='%237cdaed'/><stop offset='1' stop-color='%2322c55e'/></linearGradient></defs><rect width='64' height='64' rx='16' fill='url(%23g)'/><text x='50%25' y='54%25' text-anchor='middle' font-family='Arial' font-size='30' font-weight='900' fill='%230b1220'>M</text></svg>" />
+  <!-- Favicons (repo root) -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+  <meta name="theme-color" content="#0b1220">
 
-  <!-- Open Graph (social sharing preview) -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://maralightltd.com/" />
-  <meta property="og:title" content="Maralight Company Limited — Consulting • Strategy • Advisory • Technology" />
-  <meta property="og:description" content="Maralight Company Limited provides business development and management consultancy services, and undertakes IP-led technology development, ownership, and related services. Website launching soon." />
+  <meta property="og:title" content="Maralight Company Limited" />
+  <meta property="og:description" content="Business development & management consultancy — integrating strategy, advisory, and technology." />
+  <meta property="og:image" content="https://maralightltd.com/maralight-logo-64h.png" />
 
-  <!-- Twitter Card -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Maralight Company Limited" />
-  <meta name="twitter:description" content="Consulting • Strategy • Advisory • Technology. Website launching soon." />
+  <meta name="twitter:description" content="Consulting • Strategy • Advisory • Technology" />
 
-  <!-- Structured Data for Google -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Maralight Company Limited",
-  "url": "https://maralightltd.com",
-  "logo": "https://maralightltd.com",
-  "description": "Maralight Company Limited is a business development and management consulting firm integrating strategy, advisory and technology to help organisations grow and modernise.",
-  "foundingLocation": {
-    "@type": "Place",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "Nigeria"
-    }
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
+  <!-- Schema.org (Organization) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Maralight Company Limited",
+    "url": "https://maralightltd.com/",
+    "logo": "https://maralightltd.com/maralight-logo-64h.png",
     "email": "hello@maralightltd.com",
-    "contactType": "customer service"
+    "sameAs": []
   }
-}
-</script>
+  </script>
 
   <style>
     :root{
       --bg:#0b1220;
-      --card:rgba(255,255,255,0.06);
-      --text:rgba(255,255,255,0.92);
-      --muted:rgba(255,255,255,0.72);
-      --line:rgba(255,255,255,0.14);
-      --accent:#7cdaed;
-      --accent2:#22c55e;
+      --card: rgba(255,255,255,0.06);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.72);
+      --line: rgba(255,255,255,0.14);
+
+      /* Midnight Blue + Emerald accent system */
+      --accent:#17c9a3;
+      --accent2:#2f7bff;
+
       --shadow: 0 18px 60px rgba(0,0,0,0.35);
+      --radius: 18px;
+      --radius2: 24px;
     }
 
     *{ box-sizing:border-box; }
-    html, body { height: auto; }
+    html, body { height:auto; }
 
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      color:var(--text);
+      min-height:100vh;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      color: var(--text);
       background:
-        radial-gradient(1000px 600px at 15% 20%, rgba(124,58,237,0.30), transparent 60%),
-        radial-gradient(900px 520px at 80% 12%, rgba(34,197,94,0.18), transparent 60%),
-        radial-gradient(900px 600px at 70% 85%, rgba(59,130,246,0.16), transparent 62%),
+        radial-gradient(1000px 600px at 15% 20%, rgba(47,123,255,0.26), transparent 60%),
+        radial-gradient(900px 520px at 80% 12%, rgba(23,201,163,0.20), transparent 60%),
+        radial-gradient(900px 600px at 70% 85%, rgba(47,123,255,0.14), transparent 62%),
         var(--bg);
-
-      /* Mobile-safe layout + scrolling */
-      min-height: 100vh;
-      min-height: 100dvh;
-      display:flex;
-      align-items:flex-start;
-      justify-content:center;
-      overflow-y:auto;
-      -webkit-overflow-scrolling: touch;
-
-      /* Safe-area padding for iPhone notch + better top spacing */
-      padding:
-        max(24px, env(safe-area-inset-top))
-        18px
-        max(24px, env(safe-area-inset-bottom));
+      overflow-x:hidden;
     }
 
-    a{ color:var(--accent); text-decoration:none; }
-    a:hover{ text-decoration:underline; }
+    /* Mobile-safe spacing so top never gets cut off */
+    .page{
+      min-height: 100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: 28px 16px;
+    }
 
     .wrap{
-      width: min(980px, 100%);
+      width: min(1040px, 100%);
     }
 
-    .frame{
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.05));
       border: 1px solid var(--line);
-      background: rgba(255,255,255,0.04);
-      border-radius: 22px;
+      border-radius: var(--radius2);
       box-shadow: var(--shadow);
       overflow:hidden;
       backdrop-filter: blur(10px);
     }
 
-    .top{
+    .topbar{
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:14px;
-      padding: 18px 22px;
-      border-bottom: 1px solid var(--line);
+      gap: 16px;
+      padding: 18px 18px 16px 18px;
+      border-bottom: 1px solid rgba(255,255,255,0.10);
       background: rgba(0,0,0,0.12);
     }
 
     .brand{
       display:flex;
       align-items:center;
-      gap:12px;
-      min-width:0;
+      gap: 14px;
+      min-width: 0;
     }
 
-    /* Fancy placeholder "M" logo */
-    .logo{
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
-      display:grid;
-      place-items:center;
-      border: 1px solid rgba(255,255,255,0.18);
-      background:
-        radial-gradient(14px 14px at 30% 25%, rgba(255,255,255,0.55), transparent 60%),
-        linear-gradient(135deg, rgba(124,218,237,0.85), rgba(34,197,94,0.55));
-      box-shadow: 0 10px 26px rgba(0,0,0,0.35);
-      position: relative;
-      overflow:hidden;
-    }
-    .logo::after{
-      content:"";
-      position:absolute;
-      inset:-40%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.22), transparent);
-      transform: rotate(25deg);
-      animation: sheen 4.5s linear infinite;
-    }
-    @keyframes sheen{
-      0%{ transform: translateX(-60%) rotate(25deg); }
-      100%{ transform: translateX(60%) rotate(25deg); }
-    }
-    .logo span{
-      font-weight: 900;
-      font-size: 18px;
-      letter-spacing: 0.5px;
-      color: rgba(10,15,28,0.90);
-      text-shadow: 0 1px 0 rgba(255,255,255,0.25);
+    /* Your uploaded logo (wide) */
+    .logoImg{
+      height: 38px;
+      width: auto;
+      display:block;
+      object-fit:contain;
+      filter: drop-shadow(0 10px 26px rgba(0,0,0,0.35));
+      flex: 0 0 auto;
     }
 
-    .brandTitle{
-      min-width:0;
+    .brandText{
+      display:flex;
+      flex-direction:column;
+      line-height:1.1;
+      min-width: 0;
     }
-    .brandTitle .name{
-      margin:0;
-      font-size: 14px;
+
+    .brandName{
+      font-weight: 700;
       letter-spacing: 0.2px;
-      white-space:nowrap;
+      white-space: nowrap;
       overflow:hidden;
-      text-overflow:ellipsis;
-    }
-    .brandTitle .tag{
-      margin-top:2px;
-      font-size: 12px;
-      color: var(--muted);
-      white-space:nowrap;
-      overflow:hidden;
-      text-overflow:ellipsis;
+      text-overflow: ellipsis;
+      font-size: 15px;
     }
 
-    .status{
-      font-size: 12px;
+    .brandTag{
       color: var(--muted);
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.03);
-      padding: 8px 10px;
+      font-size: 12px;
+      letter-spacing: 0.2px;
+      margin-top: 3px;
+      white-space: nowrap;
+      overflow:hidden;
+      text-overflow: ellipsis;
+    }
+
+    .pill{
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(0,0,0,0.12);
+      color: rgba(255,255,255,0.86);
+      padding: 8px 12px;
       border-radius: 999px;
-      white-space:nowrap;
+      font-size: 12px;
+      white-space: nowrap;
     }
 
     .content{
-      padding: 26px 22px 22px;
+      padding: 26px 22px 22px 22px;
     }
 
-    .headline{
-      margin: 6px 0 10px;
-      font-size: clamp(28px, 4.2vw, 44px);
-      letter-spacing: -0.02em;
-      line-height: 1.08;
+    h1{
+      margin: 0 0 10px 0;
+      font-size: clamp(32px, 4.2vw, 52px);
+      letter-spacing: -0.6px;
+      line-height: 1.05;
     }
 
-    .sub{
-      margin: 0 0 18px;
+    p{
+      margin: 0;
       color: var(--muted);
-      font-size: 16px;
-      line-height: 1.7;
+      font-size: 15.5px;
+      line-height: 1.65;
       max-width: 78ch;
     }
 
     .chips{
       display:flex;
-      gap:8px;
-      flex-wrap:wrap;
-      margin: 10px 0 18px;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
     }
+
     .chip{
-      border: 1px solid rgba(124,218,237,0.25);
-      background: rgba(124,218,237,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.04);
       color: rgba(255,255,255,0.86);
-      border-radius: 999px;
       padding: 7px 10px;
+      border-radius: 999px;
       font-size: 12px;
-      letter-spacing: 0.2px;
     }
 
     .grid{
       display:grid;
       grid-template-columns: 1fr 1fr;
       gap: 14px;
-      margin-top: 12px;
-    }
-    @media (max-width: 860px){
-      .grid{ grid-template-columns: 1fr; }
-      .status{ display:none; }
+      margin-top: 18px;
     }
 
     .panel{
-      border: 1px solid var(--line);
-      background: rgba(0,0,0,0.14);
-      border-radius: 18px;
-      padding: 16px;
+      background: rgba(0,0,0,0.18);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius);
+      padding: 16px 16px 14px 16px;
     }
 
-    .panel h3{
-      margin: 0 0 10px;
-      font-size: 13px;
-      letter-spacing: 0.7px;
+    .panel h2{
+      margin: 0 0 10px 0;
+      font-size: 12px;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.70);
+      color: rgba(255,255,255,0.80);
     }
 
-    .panel p{
+    ul{
       margin: 0;
-      color: var(--muted);
+      padding-left: 18px;
+      color: rgba(255,255,255,0.78);
+      line-height: 1.55;
       font-size: 14px;
-      line-height: 1.7;
     }
 
-    .panel ul{
-      margin: 10px 0 0;
-      padding-left: 18px;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.8;
+    .note{
+      margin-top: 10px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.55;
     }
 
     .ctaRow{
       display:flex;
-      gap:10px;
-      flex-wrap:wrap;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
       align-items:center;
-      margin-top: 18px;
     }
 
     .btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      gap:8px;
+      gap: 10px;
+      border-radius: 999px;
       padding: 11px 14px;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.05);
-      color: var(--text);
-      font-size: 13px;
       font-weight: 650;
+      font-size: 13px;
       text-decoration:none;
-    }
-    .btnPrimary{
-      border-color: rgba(34,197,94,0.45);
-      background: rgba(34,197,94,0.12);
-    }
-    .btn:hover{
-      transform: translateY(-1px);
-      text-decoration:none;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.92);
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
     }
 
-    .fine{
-      margin-top: 14px;
-      color: rgba(255,255,255,0.55);
-      font-size: 12px;
-      line-height: 1.6;
+    .btn:hover{ transform: translateY(-1px); border-color: rgba(255,255,255,0.22); }
+
+    .btnPrimary{
+      border: 1px solid rgba(23,201,163,0.40);
+      background: linear-gradient(135deg, rgba(23,201,163,0.30), rgba(47,123,255,0.18));
     }
+
+    .btnPrimary:hover{ background: linear-gradient(135deg, rgba(23,201,163,0.36), rgba(47,123,255,0.22)); }
 
     .foot{
-      padding: 14px 22px;
-      border-top: 1px solid var(--line);
       display:flex;
       justify-content:space-between;
-      gap:10px;
-      flex-wrap:wrap;
-      color: rgba(255,255,255,0.55);
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255,255,255,0.10);
+      color: rgba(255,255,255,0.62);
       font-size: 12px;
-      background: rgba(0,0,0,0.10);
+    }
+
+    .foot a{
+      color: rgba(255,255,255,0.72);
+      text-decoration:none;
+      border-bottom: 1px dotted rgba(255,255,255,0.28);
+    }
+    .foot a:hover{ color: rgba(255,255,255,0.88); border-bottom-color: rgba(255,255,255,0.45); }
+
+    /* Mobile layout */
+    @media (max-width: 860px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+    @media (max-width: 520px){
+      .topbar{ align-items:flex-start; }
+      .pill{ display:none; }
+      .logoImg{ height: 34px; }
+      .content{ padding: 22px 16px 18px 16px; }
     }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
-    <div class="frame">
-      <div class="top">
-        <div class="brand">
-          <div class="logo" aria-label="Maralight placeholder logo"><span>M</span></div>
-          <div class="brandTitle">
-            <p class="name"><strong>Maralight Company Limited</strong></p>
-            <div class="tag">Consulting • Strategy • Advisory • Technology</div>
+  <main class="page">
+    <section class="wrap">
+      <div class="card">
+        <div class="topbar">
+          <div class="brand">
+            <!-- Logo in repo root -->
+            <img class="logoImg" src="/maralight-logo-64h.png" alt="Maralight Company Limited logo">
+            <div class="brandText">
+              <div class="brandName">Maralight Company Limited</div>
+              <div class="brandTag">Consulting • Strategy • Advisory • Technology</div>
+            </div>
           </div>
-        </div>
-        <div class="status">Corporate website launching soon</div>
-      </div>
-
-      <div class="content">
-        <div class="headline">Helping organisations grow, modernise, and perform.</div>
-        <p class="sub">
-          Maralight Company Limited is a business development and management consulting firm that helps
-          organisations clarify strategy, strengthen execution, and accelerate growth. We also develop and own
-          intellectual property and technology solutions that improve performance, decision-making, and scalability
-          across industries.
-        </p>
-
-        <div class="chips" aria-label="Service keywords">
-          <div class="chip">Consulting</div>
-          <div class="chip">Strategy</div>
-          <div class="chip">Advisory</div>
-          <div class="chip">Technology</div>
+          <div class="pill">Corporate website launching soon</div>
         </div>
 
-        <div class="grid">
-          <div class="panel">
-            <h3>What we do</h3>
-            <ul>
-              <li>Business development, growth strategy, and go-to-market support</li>
-              <li>Management advisory, operating model design, and performance improvement</li>
-              <li>Technology solutions and product development (IP-led)</li>
-              <li>Data, analytics, and automation to strengthen decision-making</li>
-            </ul>
+        <div class="content">
+          <h1>Helping organisations grow, modernise, and perform.</h1>
+
+          <p>
+            Maralight Company Limited is a business development and management consultancy firm.
+            We provide <strong>consulting, strategy, and advisory</strong> services across industries — and where it creates value,
+            we integrate <strong>technology</strong> to improve decision-making, execution, and measurable outcomes.
+          </p>
+
+          <div class="chips" aria-label="Key capabilities">
+            <span class="chip">Business Development</span>
+            <span class="chip">Commercial Strategy</span>
+            <span class="chip">Operating Models</span>
+            <span class="chip">Digital Enablement</span>
+            <span class="chip">Analytics</span>
           </div>
 
-          <div class="panel">
-            <h3>How we work</h3>
-            <p>
-              We engage with leaders and teams to define objectives, design practical solutions,
-              and support implementation with disciplined delivery and measurable outcomes.
-            </p>
-            <p style="margin-top:10px;">
-              <strong>EnergyIQ</strong> is a product owned by Maralight Company Limited — coming soon.
-            </p>
+          <div class="grid" role="region" aria-label="What we do and how to engage">
+            <div class="panel">
+              <h2>What we do</h2>
+              <ul>
+                <li>Business growth strategy and market expansion</li>
+                <li>Management consultancy and operating model support</li>
+                <li>IP-led product and technology development (owned and delivered by Maralight)</li>
+                <li>Data, analytics, and automation to strengthen execution</li>
+              </ul>
+            </div>
+
+            <div class="panel">
+              <h2>How to engage</h2>
+              <p class="note">
+                Reach out and describe your objective (growth, performance improvement, technology enablement, or a new product idea).
+                We’ll respond with next steps and a short discovery call if required.
+              </p>
+              <p class="note">
+                <strong>EnergyIQ</strong> is a product owned by Maralight Company Limited — coming soon.
+              </p>
+
+              <div class="ctaRow">
+                <a class="btn btnPrimary" href="mailto:hello@maralightltd.com?subject=Inquiry%20-%20Maralight%20Company%20Limited&body=Hello%20Maralight%20Team%2C%0A%0AI%20would%20like%20to%20discuss%20the%20following%3A%0A%0A-%20Objective%3A%0A-%20Industry%3A%0A-%20Timeline%3A%0A-%20Contact%20details%3A%0A%0AThank%20you."
+                   aria-label="Email Maralight">Contact us: hello@maralightltd.com</a>
+
+                <a class="btn" href="mailto:hello@maralightltd.com?subject=Discovery%20Call%20Request&body=Hello%20Maralight%20Team%2C%0A%0AI%20would%20like%20to%20request%20a%20discovery%20call.%0A%0A-%20Objective%3A%0A-%20Preferred%20time%20window%3A%0A-%20Phone%2FWhatsApp%3A%0A%0AThanks."
+                   aria-label="Request a discovery call">Request a consultation</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="foot">
+            <div>Rivers, Nigeria</div>
+            <div>© <span id="yr"></span> Maralight Company Limited • <a href="https://maralightltd.com/">maralightltd.com</a></div>
           </div>
         </div>
-
-        <div class="ctaRow">
-          <a class="btn btnPrimary" href="mailto:hello@maralightltd.com">Contact us: hello@maralightltd.com</a>
-          <a class="btn" href="mailto:hello@maralightltd.com?subject=Maralight%20-%20Consulting%20Enquiry">Request a consultation</a>
-        </div>
-
-        <div class="fine">
-          Location: Rivers, Nigeria. For all enquiries, please email <a href="mailto:hello@maralightltd.com">hello@maralightltd.com</a>.
-        </div>
       </div>
-
-      <div class="foot">
-        <div>Rivers, Nigeria</div>
-        <div>© <span id="y"></span> Maralight Company Limited</div>
-      </div>
-    </div>
-  </div>
+    </section>
+  </main>
 
   <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
+    // Current year
+    document.getElementById("yr").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
